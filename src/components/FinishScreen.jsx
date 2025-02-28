@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import Loading from "./Loading";
-import Requiz from "./requiz";
+import Requiz from "./Requiz";
 
 function FinishScreen({ questions, answers, dispatch }) {
   const [testResult, setTestResult] = useState(null);
