@@ -34,7 +34,7 @@ function FinishScreen({ questions, answers, dispatch }) {
             method: "POST",
             headers: {
               Authorization:
-                "Bearer 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",
+                "Bearer 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",
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
@@ -61,15 +61,15 @@ function FinishScreen({ questions, answers, dispatch }) {
   }, [questions, answers]);
 
   return (
-    <div className="markdown-content mb-10">
+    <>
       {loading && <Loading text={"درحال تحلیل آزمون ... لطفا صبر کنید"} />}
       {testResult && (
-        <>
+        <div className="markdown-content mb-10">
           <ReactMarkdown>{testResult}</ReactMarkdown>
           <Requiz dispatch={dispatch} />
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

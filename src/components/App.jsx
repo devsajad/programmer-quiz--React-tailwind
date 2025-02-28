@@ -9,7 +9,8 @@ import QuestionItem from "./QuestionItem";
 import Progress from "./Progress";
 import Loading from "./Loading";
 import FinishScreen from "./FinishScreen";
-
+import { questionsData } from "../../data/questions.json";
+console.log(questionsData);
 function App() {
   const initialState = {
     // Loading , Ready , Start , Finished , Error
@@ -26,7 +27,7 @@ function App() {
 
   function reducer(state, action) {
     switch (action.type) {
-      case "dataRecieved":
+      case "dataReceived":
         return { ...state, questions: action.payload, status: "ready" };
 
       case "start":
@@ -62,17 +63,19 @@ function App() {
     }
   }
 
+  // Get Data Questions from api if you have
   useEffect(() => {
-    try {
-      fetch("/api/questions")
-        .then((res) => res.json())
-        .then((data) => {
-          dispatch({ type: "dataRecieved", payload: data });
-        });
-    } catch (error) {
-      console.error(error);
-      dispatch({ type: "error" });
-    }
+    dispatch({ type: "dataReceived", payload: questionsData });
+    // try {
+    //   fetch("/api/questions")
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       dispatch({ type: "dataRecieved", payload: data });
+    //     });
+    // } catch (error) {
+    //   console.error(error);
+    //   dispatch({ type: "error" });
+    // }
   }, []);
 
   return (
