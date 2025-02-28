@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import StartScreen from "./StartScreen";
-import Main from "./main";
+import Main from "./Main";
 import Question from "./Question";
 import Options from "./Options";
 import QuestionScreen from "./QuestionScreen";
