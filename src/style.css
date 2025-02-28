@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Yekan Bakh";
+}
+
+@layer base {
+  body {
+    @apply font-sans overflow-x-hidden bg-orange-50;
+  }
+  section {
+    @apply flex items-center md:basis-1/2 flex-col gap-5;
+  }
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+
+  section {
+    h1,
+    h2 {
+      @apply font-bold text-4xl text-center max-w-sm md:max-w-lg md:text-5xl;
+    }
+
+    p {
+      @apply text-gray-50 max-w-sm text-center text-xl font-medium md:text-2xl md:max-w-md;
+    }
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-dvw h-dvh flex flex-col lg:flex-row;
+  }
+  .btn {
+    @apply block text-gray-950 bg-yellow-400 font-bold py-3 px-8 rounded-md text-lg hover:bg-yellow-500 duration-300;
+    box-shadow: -5px 5px 0px rgba(255, 255, 255, 1);
+    @variant hover {
+      box-shadow: -8px 8px 0px rgba(255, 255, 255, 1);
+    }
+  }
+  .option {
+    @apply bg-blue-950 basis-55/100 md:basis-1/2 gap-2 justify-center;
+
+    button {
+      @apply bg-gray-200 md:p-8 pr-5 rounded-xs w-sm max-[28rem]:w-xs min-h-20 md:w-xl md:h-30 hover:bg-orange-100 duration-300;
+    }
+    p {
+      @apply text-gray-950 font-semibold text-right text-lg md:text-xl;
+    }
+  }
+}
+
+.answered {
+  @apply bg-blue-950 text-gray-100 border-1 border-gray-300;
+  p {
+    @apply text-gray-300;
+  }
+}
+
+.markdown-content {
+  @apply block max-w-5xl mx-auto bg-orange-50 p-8;
+  h1 {
+    @apply w-fit text-center text-gray-50 mx-auto font-semibold text-2xl bg-blue-950 rounded-sm p-5 mb-10;
+  }
+  h2,
+  h3,
+  h4 {
+    @apply bg-yellow-400 mt-12 p-3 mb-5 block w-fit font-bold rounded-sm;
+  }
+  ul {
+    @apply space-y-4;
+  }
+  strong {
+    @apply block;
+  }
+  p,
+  strong {
+    @apply mb-2;
+  }
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 01 hairline.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 02 thin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 03 light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 04 regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 05 medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 06 bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 07 heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/yekan bakh en 08 fat.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
