@@ -20,9 +20,7 @@ function FinishScreen({ questions, answers, dispatch }) {
         ${formattedQuestions
           .map(
             (q, i) =>
-              `${i + 1}. ${q.question}\nOptions: ${q.options.join(
-                ", "
-              )}\nAnswer: ${q.answer}`
+              `${i + 1}. ${q.question}\nOptions: ${q.options.join(", ")}\nAnswer: ${q.answer}`
           )
           .join("\n\n")}
       `;
@@ -33,7 +31,7 @@ function FinishScreen({ questions, answers, dispatch }) {
           {
             method: "POST",
             headers: {
-              Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+              Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
