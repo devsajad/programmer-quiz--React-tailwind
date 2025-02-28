@@ -21,12 +21,12 @@ function StartScreen({ dispatch }) {
 
         <div>
           <img
-            src="../../public/c2a6da8976c650fc7168f45e6ce534d0.svg"
+            src="/c2a6da8976c650fc7168f45e6ce534d0.svg"
             alt="Shape icon"
             className="absolute bottom-7 right-13"
           />
           <img
-            src="../../public/453de910420da751ccafc6a7585ac8b6.svg"
+            src="/453de910420da751ccafc6a7585ac8b6.svg"
             alt="Shape icon"
             className="absolute bottom-12 right-8"
           />
