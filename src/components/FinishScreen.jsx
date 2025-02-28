@@ -34,7 +34,7 @@ function FinishScreen({ questions, answers, dispatch }) {
             method: "POST",
             headers: {
               Authorization:
-                "Bearer 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",
+              process.env.OPENAI_API_KEY,
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
